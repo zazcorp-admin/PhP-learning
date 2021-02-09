@@ -46,4 +46,8 @@ Route::get('/', function () {
 // Route::get('/test', 'PostsController@index');
 
 //working this only
-Route::get('/post', [pc::class, 'index']);
+// Route::get('/post/{id}', [pc::class, 'index']);
+
+
+//working for resources method
+Route::resource('post', pc::class);
