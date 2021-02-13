@@ -51,3 +51,7 @@ Route::get('/', function () {
 
 //working for resources method
 Route::resource('post', pc::class);
+
+
+Route::get('/contact', [pc::class, 'contact']);
+Route::get('posting/{id}/{name}/{pass}', [pc::class, 'show_post']);

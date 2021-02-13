@@ -81,4 +81,16 @@ class PostsController extends Controller
     {
         //
     }
+
+    public function contact(){
+        return view('contact');
+    }
+
+    public function show_post($id, $name, $pass){
+        // for single data pass
+        // return view('post')->with('id', $id);
+
+        // for multi data pass
+        return view('post', compact('id', 'name', 'pass'));
+    }
 }
