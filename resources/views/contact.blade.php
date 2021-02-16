@@ -18,6 +18,7 @@
 @endsection
 
 
+
 @section('footer')
     {{-- <script>alert('be careful visitor')</script> --}}
 @endsection
