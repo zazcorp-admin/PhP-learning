@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController as pc;
+// use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +57,8 @@ Route::resource('post', pc::class);
 
 Route::get('/contact', [pc::class, 'contact']);
 Route::get('posting/{id}/{name}/{pass}', [pc::class, 'show_post']);
+
+
+Route::get('/in', function () {
+    DB::insert('insert into posts(title, content) values(?, ?)',['php with laravel', 'php and laravel is second best for web programming']);
+});
